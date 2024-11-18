@@ -17,7 +17,7 @@ jobs:
           sed -i 's/moduleDescription = "/moduleDescription = "(jp.pokemon.pokemontcgp) /g' module.gradle
           sed -i "s/com.game.packagename/jp.pokemon.pokemontcgp/g" module/src/main/cpp/game.h
           ./gradlew :module:assembleRelease
-      - uses: actions/upload-artifact@v3
+      - uses: actions/upload-artifact@v4
         with:
           name: zygisk-il2cppdumper
           path: out/magisk_module_release/
